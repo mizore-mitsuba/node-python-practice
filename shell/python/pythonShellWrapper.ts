@@ -16,15 +16,12 @@ export function pythonShellWrapper(
       stderrSplitter
     );
 
-    console.log("called");
-
     shell.on("error", (error) => {
       reject(error);
     });
 
     shell.on("message", (message) => {
       // データを表示
-      console.log("message");
       resolve(message);
     });
 
